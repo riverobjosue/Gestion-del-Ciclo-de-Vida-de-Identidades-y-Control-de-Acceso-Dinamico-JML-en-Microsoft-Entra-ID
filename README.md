@@ -131,11 +131,13 @@ La plataforma Microsoft Entra ID registra de forma centralizada cada cambio de e
 | | Expulsión del grupo dinámico | `Remove member from group` | `Core Directory` (Sistema) |
 
 ### Evidencias de Auditoría en la Consola
-- **Historial de Actividad del Usuario:** Trazabilidad sobre la modificación de atributos y la revocación global de tokens de sesión.  
-  ![Audit Logs de Usuario](img/04-user-audit-logs.png)
+- **Historial de Actividad del Usuario:**
+<img width="1098" height="808" alt="04-User AuditLogs" src="https://github.com/user-attachments/assets/4a7528a2-a715-4475-9672-c997bcb8a00e" />
 
-- **Historial de Actividad del Grupo (Evaluación Dinámica):** Evidencia de la ejecución desatendida del motor de reglas por parte del actor de sistema *Core Directory*.  
-  ![Audit Logs de Grupo Dinámico](img/04-group-dynamic-audit.png)
+- **Historial de Actividad del Grupo (Evaluación Dinámica):**
+  - **Dpto. Ventas:**
+
+  - **Dpto. IT:**
 
 ---
 
@@ -143,9 +145,9 @@ La plataforma Microsoft Entra ID registra de forma centralizada cada cambio de e
 
 La implementación del modelo **JML basado en ABAC** en Microsoft Entra ID resuelve desafíos clave en la gestión de identidades y accesos a nivel empresarial:
 
-1. **Eficiencia Onboarding / Offboarding:** Reduce el tiempo de aprovisionamiento y desvinculación a cero tiempo de espera (*zero-touch*), eliminando tareas manuales repetitivas para el equipo de Helpdesk.
+1. **Eficiencia:** Reduce el tiempo de tiempo de espera, eliminando tareas manuales repetitivas para el equipo de Helpdesk.
 2. **Mitigación de Vulnerabilidades (Privilege Creep):** Garantiza que ningún usuario conserve accesos heredados de roles o departamentos anteriores, aplicando estrictamente el principio de **menor privilegio (Least Privilege)**.
-3. **Cierre Inmediato de Brechas de Seguridad:** La combinación de `Block Sign-in` + `Revoke Sessions` en la fase Leaver asegura la invalidación de tokens activos, previniendo accesos no autorizados mediante sesiones persistentes.
-4. **Trazabilidad y Cumplimiento (Auditability):** Todo el lifecycle queda registrado y respaldado en los **Audit Logs** de Entra ID, facilitando auditorías de cumplimiento normativo (ISO 27001, SOC 2).
+3. **Cierre Inmediato de Brechas de Seguridad:** La combinación de `Block Sign-in` + `Revoke Sessions` en la fase Leaver asegura la invalidación de tokens activos, previniendo accesos no autorizados por medio de sesiones abiertas.
+4. **Trazabilidad y Cumplimiento (Auditability):** Todo el lifecycle queda registrado y respaldado en los **Audit Logs** de Entra ID, facilitando auditorías de cumplimiento normativo (por ejemplo: ISO 27001).
 
 
