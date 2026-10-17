@@ -102,7 +102,7 @@ Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 <img width="1120" height="101" alt="03-Revoke Sessions" src="https://github.com/user-attachments/assets/bcf06215-75b8-432d-bf83-24b5c38bcdbf" />
 <img width="616" height="105" alt="03-Revoke Sessions OK" src="https://github.com/user-attachments/assets/dabbd299-c5ce-4df0-9ef2-2a187c7ed7c8" />
 
-- Para eliminar automatica al user como miembro del grupo `Depto. IT` reemplazamos el atributo "IT" dentro del campo `Department` por el atributo "BAJA" 
+- Para eliminar automaticamente al user como miembro del grupo `Depto. IT` reemplazamos el atributo "IT" dentro del campo `Department` por el atributo "BAJA" 
 <img width="865" height="853" alt="03-Baja Depto IT" src="https://github.com/user-attachments/assets/6f3bb911-aa08-4a77-ad89-4d37e76f8d5c" />
 <img width="845" height="846" alt="03-Depto Baja" src="https://github.com/user-attachments/assets/0949784d-b9cc-4096-b94e-55fc5ccb67a1" />
 
