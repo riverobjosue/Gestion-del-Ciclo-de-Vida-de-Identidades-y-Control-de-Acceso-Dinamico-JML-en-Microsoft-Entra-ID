@@ -28,6 +28,7 @@ se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 - ```text
   (user.department -eq "Ventas")
 <img width="1581" height="449" alt="Regla Ventas" src="https://github.com/user-attachments/assets/88261759-51f8-4c8f-8a1d-95084c2fc69c" />
+
 - ```text
   (user.department -eq "IT")
 <img width="1573" height="446" alt="Reglas IT" src="https://github.com/user-attachments/assets/69dc6cf0-d28f-4f90-9f9d-69429b08eaf6" />
