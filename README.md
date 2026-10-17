@@ -137,7 +137,11 @@ La plataforma Microsoft Entra ID registra de forma centralizada cada cambio de e
 - **Historial de Actividad del Grupo (Evaluación Dinámica):**
   - **Dpto. Ventas:**
 
+<img width="1366" height="359" alt="04-Ventas AuditLogs" src="https://github.com/user-attachments/assets/177173a8-6cb8-43be-b810-ed218eeb6423" />
+
   - **Dpto. IT:**
+
+<img width="1564" height="373" alt="04-IT AuditLogs" src="https://github.com/user-attachments/assets/aaec6e5d-36a3-4ea7-ae9a-65f2bf8b2f26" />
 
 ---
 
