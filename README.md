@@ -55,7 +55,7 @@ Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 
 ### Verificación
 
-- Al mirar el grupo "Dpto. Ventas" vemos que dentro de sus Miembros encontramos al user Marco Riera
+- Al mirar el grupo "Dpto. Ventas" vemos que el user Marco Riera aparece en la lista de miembros 
 <img width="1053" height="519" alt="01-Ventas Overview" src="https://github.com/user-attachments/assets/12dd6ecb-0be7-43b2-9c09-2f9092e53606" />
 <img width="1329" height="347" alt="01-Ventas Members" src="https://github.com/user-attachments/assets/254d53d4-b8e2-496c-a207-adadcf48fd03" />
 
