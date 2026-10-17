@@ -40,7 +40,7 @@ Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 ## Implementación y Fases del Ciclo de Vida
 
 ### 1. Fase Joiner (Onboarding Automatizado)
-- **Mecanismo:** Creacion del usuario y Evaluación de reglas de membresía dinámica basadas en el atributo del perfil del usuario (`user.department -eq "Ventas"`).
+- **Mecanismo:** Creacion del usuario y Evaluación de reglas de membresía dinámica basadas en el atributo del perfil del usuario.
 - **Comportamiento:** Al aprovisionar la cuenta y configurar `Department = Ventas`, Microsoft Entra ID agrega automáticamente la identidad al grupo `Depto. Ventas` sin intervención administrativa.
 - **Objetivo de Seguridad:** Garantizar permisos base estandarizados mediante automatización sin intervención manual (*zero-touch*).
 
