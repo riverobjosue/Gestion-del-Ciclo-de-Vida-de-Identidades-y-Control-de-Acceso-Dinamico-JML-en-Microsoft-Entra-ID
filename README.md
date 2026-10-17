@@ -117,7 +117,9 @@ Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 
 ## Auditoría y Registros de Eventos (Audit Logs)
 
-Los eventos registrados durante este proyecto demuestran la separación entre la capa de administración de identidades y la capa de autorización. Mientas que el personal de Helpdesk únicamente actualiza los atributos del perfil del usuario (Update user), el motor de backend de Entra ID (Core Directory) evalúa en segundo plano las políticas ABAC para gestionar la membresía de los grupos (Add/Remove member to group) de forma autónoma, garantizando trazabilidad total en los registros de auditoría
+Los eventos registrados durante este proyecto demuestran la separación entre las acciones del HelpDesk y las acciones Automatizadas mediante las reglas dinamicas.
+  - **Acción Manual de Soporte/Helpdesk:** Eventos bajo la categoría **UserManagement** (Update user, Disable account, Update StsRefreshTokenValidFrom), donde el iniciador registrado es la cuenta del administrador.
+  - **Automatización por Reglas Dinámicas (ABAC):** Eventos bajo la categoría **GroupManagement** (Add/Remove member from group), donde el iniciador registrado es el propio sistema Core Directory / Dynamic Groups.   
 
 ### Evidencias de Auditoría en la Consola
 - **Historial de Actividad del Usuario:**
