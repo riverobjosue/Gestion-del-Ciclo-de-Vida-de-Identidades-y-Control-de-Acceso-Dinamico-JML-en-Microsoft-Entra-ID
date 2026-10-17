@@ -16,7 +16,6 @@ utilizamos reglas de membresía dinámica en grupos de seguridad, eliminando la 
 ---
 
 ## Prerrequisitos y Configuración de Infraestructura Antes de ejecutar las pruebas del ciclo de vida
-
 Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro de Microsoft Entra ID: 
 
 - **Grupos de Seguridad Creados:**
