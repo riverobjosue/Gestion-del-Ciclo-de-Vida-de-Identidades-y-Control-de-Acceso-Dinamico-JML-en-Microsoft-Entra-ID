@@ -1,4 +1,4 @@
-<img width="1042" height="515" alt="Captura de pantalla 2026-10-15 182911" src="https://github.com/user-attachments/assets/3a7e7976-aba0-4678-8b08-52b93b096e6c" /># Gestión del Ciclo de Vida de Identidades y Control de Acceso Dinámico (JML) en Microsoft Entra ID
+# Gestión del Ciclo de Vida de Identidades y Control de Acceso Dinámico (JML) en Microsoft Entra ID
 ## Objetivo
 Implementar un modelo de **Control de Acceso Basado en Atributos (ABAC)** dentro de Microsoft Entra ID para automatizar el ciclo de vida de las identidades de un usuario: **Joiner, Mover y Leaver (JML)**.
 
