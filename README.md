@@ -117,18 +117,7 @@ Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 
 ## Auditoría y Registros de Eventos (Audit Logs)
 
-La plataforma Microsoft Entra ID registra de forma centralizada cada cambio de estado dentro del ciclo de vida JML. A continuación se detallan los eventos clave en los **Audit Logs**, diferenciando las acciones administrativas manuales de los procesos automatizados del sistema (**`Core Directory`**):
-
-| Fase JML | Acción Ejecutada | Evento Registrado (`Logged Event`) | Actor / Initiated By |
-| :--- | :--- | :--- | :--- |
-| **1. Joiner** | Asignación de departamento | `Update user` | Administrador / Helpdesk |
-| | Inclusión dinámica al grupo | `Add member to group` | `Core Directory` (Sistema) |
-| **2. Mover** | Cambio a nuevo departamento | `Update user` | Administrador / Helpdesk |
-| | Salida del grupo anterior | `Remove member from group` | `Core Directory` (Sistema) |
-| | Entrada al nuevo grupo | `Add member to group` | `Core Directory` (Sistema) |
-| **3. Leaver** | Bloqueo de inicio de sesión | `Update user` (`Account enabled: No`) | Administrador / Helpdesk |
-| | Revocación de tokens activos | `Revoke user sessions` | Administrador / Helpdesk |
-| | Expulsión del grupo dinámico | `Remove member from group` | `Core Directory` (Sistema) |
+Los eventos registrados durante este proyecto demuestran la separación entre la capa de administración de identidades y la capa de autorización. Mientas que el personal de Helpdesk únicamente actualiza los atributos del perfil del usuario (Update user), el motor de backend de Entra ID (Core Directory) evalúa en segundo plano las políticas ABAC para gestionar la membresía de los grupos (Add/Remove member to group) de forma autónoma, garantizando trazabilidad total en los registros de auditoría
 
 ### Evidencias de Auditoría en la Consola
 - **Historial de Actividad del Usuario:**
