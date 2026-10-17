@@ -113,5 +113,39 @@ Se configuró la estructura de grupos dinámicos basada en el modelo ABAC dentro
 <img width="788" height="333" alt="03-IT Empty User" src="https://github.com/user-attachments/assets/02cfa101-9cf9-4023-8139-d7081448ad51" />
 
 
+---
+
+## Auditoría y Registros de Eventos (Audit Logs)
+
+La plataforma Microsoft Entra ID registra de forma centralizada cada cambio de estado dentro del ciclo de vida JML. A continuación se detallan los eventos clave en los **Audit Logs**, diferenciando las acciones administrativas manuales de los procesos automatizados del sistema (**`Core Directory`**):
+
+| Fase JML | Acción Ejecutada | Evento Registrado (`Logged Event`) | Actor / Initiated By |
+| :--- | :--- | :--- | :--- |
+| **1. Joiner** | Asignación de departamento | `Update user` | Administrador / Helpdesk |
+| | Inclusión dinámica al grupo | `Add member to group` | `Core Directory` (Sistema) |
+| **2. Mover** | Cambio a nuevo departamento | `Update user` | Administrador / Helpdesk |
+| | Salida del grupo anterior | `Remove member from group` | `Core Directory` (Sistema) |
+| | Entrada al nuevo grupo | `Add member to group` | `Core Directory` (Sistema) |
+| **3. Leaver** | Bloqueo de inicio de sesión | `Update user` (`Account enabled: No`) | Administrador / Helpdesk |
+| | Revocación de tokens activos | `Revoke user sessions` | Administrador / Helpdesk |
+| | Expulsión del grupo dinámico | `Remove member from group` | `Core Directory` (Sistema) |
+
+### Evidencias de Auditoría en la Consola
+- **Historial de Actividad del Usuario:** Trazabilidad sobre la modificación de atributos y la revocación global de tokens de sesión.  
+  ![Audit Logs de Usuario](img/04-user-audit-logs.png)
+
+- **Historial de Actividad del Grupo (Evaluación Dinámica):** Evidencia de la ejecución desatendida del motor de reglas por parte del actor de sistema *Core Directory*.  
+  ![Audit Logs de Grupo Dinámico](img/04-group-dynamic-audit.png)
+
+---
+
+## Conclusiones e Impacto Operativo
+
+La implementación del modelo **JML basado en ABAC** en Microsoft Entra ID resuelve desafíos clave en la gestión de identidades y accesos a nivel empresarial:
+
+1. **Eficiencia Onboarding / Offboarding:** Reduce el tiempo de aprovisionamiento y desvinculación a cero tiempo de espera (*zero-touch*), eliminando tareas manuales repetitivas para el equipo de Helpdesk.
+2. **Mitigación de Vulnerabilidades (Privilege Creep):** Garantiza que ningún usuario conserve accesos heredados de roles o departamentos anteriores, aplicando estrictamente el principio de **menor privilegio (Least Privilege)**.
+3. **Cierre Inmediato de Brechas de Seguridad:** La combinación de `Block Sign-in` + `Revoke Sessions` en la fase Leaver asegura la invalidación de tokens activos, previniendo accesos no autorizados mediante sesiones persistentes.
+4. **Trazabilidad y Cumplimiento (Auditability):** Todo el lifecycle queda registrado y respaldado en los **Audit Logs** de Entra ID, facilitando auditorías de cumplimiento normativo (ISO 27001, SOC 2).
 
 
